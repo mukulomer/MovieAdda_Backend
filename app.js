@@ -4,6 +4,7 @@ var cors = require("cors");
 const mongoose = require("mongoose");
 const User = require('./models/users')
 const Favourites = require('./models/favourites')
+const config = require('./config/config')
 //pipeline and middleware
 const router = express.Router();
 const Auth = require('./middleware/auth')
@@ -134,6 +135,6 @@ try{
   }
 });
 
-app.listen(3002, () => {
+app.listen(config.port, () => {
   console.log("listening");
 });

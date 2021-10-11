@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require('dotenv')
 var cors = require("cors");
 const mongoose = require("mongoose");
 const User = require('./models/users')
@@ -135,6 +136,6 @@ try{
   }
 });
 
-app.listen(config.port, () => {
+app.listen( process.env.port, () => {
   console.log("listening");
 });

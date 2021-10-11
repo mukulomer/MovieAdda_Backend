@@ -3,7 +3,7 @@ const config = require('../config/config')
 
 module.exports = {
     generateToken (id) {
-        const token = jwt.sign({id},  process.env.jwt_hash, { expiresIn: '30d' })
+        const token = jwt.sign({id},  process.env.JWT_HASH, { expiresIn: '30d' })
         return token
     }
 }
